@@ -1,0 +1,2 @@
+index.tml 
+we use main.jsx as our main file in the  script tag 
