@@ -9,3 +9,8 @@ one div with an id of "root" where our injected htmls will render
  
 if we look  at our App.jsx
 IF a function that start with a capital letter inside of react is called a componet. If You are returning jsx form a function its componet 
+
+in order to be able to modify variables and have thing be interactive 
+You need to use states. This is a hook inside of react useState()
+it inports it form:
+import { useState } from "react";
