@@ -7,7 +7,7 @@ export function NewTodoForm({ onSubmit }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (newItem === "") return;
-    // eslint-disable-next-line react/prop-types
+
     onSubmit(newItem);
     setNewItem("");
   }
