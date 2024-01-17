@@ -1,24 +1,50 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
+  const [newItem, setNewItem] = useState("");
+  const [todos, setTodos] = useState([]);
+
+  function handelSubmit(e) {
+    e.preventDefault();
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        { id: crypto.randomUUID(), title: newItem, completed: false },
+      ];
+    });
+    setNewItem("");
+  }
+
   return (
     <>
-      <form className="new-item-form">
+      <form onSubmit={handelSubmit} className="new-item-form">
         <div className="form-row">
           <label htmlFor="item">New Item</label>
-          <input type="text" id="item" />
+          <input
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
+            type="text"
+            id="item"
+          />
         </div>
         <button className="btn">Add</button>
       </form>
       <h1 className="header">Todo List</h1>
       <ul className="list">
-        <li>
-          <label>
-            <input type="checkbox" />
-            item
-            <button className="btn btn-danger">DELETE</button>
-          </label>
-        </li>
+        {todos.map((todo) => {
+          return (
+            <>
+              <li key={todo.id}>
+                <label>
+                  <input type="checkbox" checked={todo.completed} />
+                  {todo.title}
+                  <button className="btn btn-danger">DELETE</button>
+                </label>
+              </li>
+            </>
+          );
+        })}
       </ul>
     </>
   );

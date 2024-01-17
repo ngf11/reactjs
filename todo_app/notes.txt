@@ -1,2 +1,3 @@
 -run "npm create vite@lates"
 -then before startinbg npm i to install all our dependecies
+to Have things interactive we use somethig called useState()
