@@ -1,0 +1,2 @@
+-run "npm create vite@lates"
+-then before startinbg npm i to install all our dependecies
