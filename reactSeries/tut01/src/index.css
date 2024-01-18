@@ -18,8 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 2px);
-
-  max-width: 500px;
+  width: 100vw;
   border: 1px solid #4267b2;
   margin: auto;
 }
