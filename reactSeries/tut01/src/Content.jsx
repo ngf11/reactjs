@@ -1,12 +1,18 @@
+import { useState } from "react";
+
 const Content = () => {
+  const [name, setName] = useState("nico");
   const handelNameChange = () => {
     const names = ["nico", "siggy", "didi", "dog"];
-    return names[Math.floor(Math.random() * names.length)];
+    setName(names[Math.floor(Math.random() * names.length)]);
   };
+  const [greet, setGreet] = useState("Hello");
+
   const handelGreet = () => {
     const greets = ["Hello", "Hola", "Bonjour", "こんにちは"];
-    return greets[Math.floor(Math.random() * greets.length)];
+    setGreet(greets[Math.floor(Math.random() * greets.length)]);
   };
+
   const handelClick = () => {
     console.log("You got it");
   };
@@ -19,9 +25,11 @@ const Content = () => {
   return (
     <main>
       <p onDoubleClick={handelClick}>
-        {handelGreet()}, {handelNameChange()}
+        {greet}, {name}!
       </p>
-      <button onClick={handelClick}>Click me</button>
+
+      <button onClick={handelGreet}>Change Greet</button>
+      <button onClick={handelNameChange}>Change Name</button>
       <button onClick={() => handelClickTwo("nico")}>Click me</button>
       <button onClick={(e) => handelClickThree(e)}>Click me</button>
     </main>
