@@ -7,8 +7,8 @@ export function Journal() {
           <textarea
             name="daily-journal"
             id="daily-journal"
-            cols="33"
-            rows="10"
+            cols="43"
+            rows="5"
           ></textarea>
         </div>
         <div className="wins">
@@ -18,11 +18,11 @@ export function Journal() {
           <input type="text" />
           <p className="small-text">
             Write down three wins you had today. It could be anything i.e: I
-            went for a walk, I worked-out, I ate a healty meal.
+            went for a walk, I worked out, I ate a healty meal.
           </p>
-        </div>
-        <div className="sub-bnt">
-          <button className="btn">Submmit</button>
+          <div className="sub-bnt">
+            <button className="btn">Submmit</button>
+          </div>
         </div>
       </form>
     </div>

@@ -39,7 +39,7 @@ header {
 }
 
 .btn:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 1em #646cffaa);
 }
 .DayNotes {
   grid-column: 6/10;
@@ -51,12 +51,21 @@ header {
   border: 1px solid #ccc;
   border-radius: 1rem;
   padding: 2rem;
+  gap: 1rem;
 }
 .wins {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
+
+.sub-bnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* align-self: center; */
+}
+
 label,
 .small-text,
 textarea {
