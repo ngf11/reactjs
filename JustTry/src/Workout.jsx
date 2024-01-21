@@ -19,7 +19,7 @@ export function Workout() {
         </div>
       </div>
       <div className="sub-bnt">
-        <button className="btn">Submmit</button>
+        <button className="btn">Completed</button>
       </div>
     </div>
   );
