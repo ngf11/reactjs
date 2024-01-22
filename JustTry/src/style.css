@@ -93,10 +93,10 @@ label {
   box-shadow: 1px 1px 1px #999;
   border-radius: 2rem;
   padding: 1rem;
-  grid-column: 1/3;
   display: flex;
   flex-direction: row;
-
+}
+.workout {
   grid-column: 1/3;
   grid-row: 2/4;
   display: flex;
@@ -115,4 +115,9 @@ label {
 .smaller-text {
   font-size: 0.8rem;
   letter-spacing: 1px;
+}
+
+.macros {
+  grid-column: 3/6;
+  grid-row: 2/4;
 }
