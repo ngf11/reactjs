@@ -1,37 +1,34 @@
 import { useState } from "react";
 
 const Content = () => {
-  const [name, setName] = useState("nico");
-  const handelNameChange = () => {
-    const names = ["nico", "siggy", "didi", "dog"];
-    setName(names[Math.floor(Math.random() * names.length)]);
-  };
-  const [greet, setGreet] = useState("Hello");
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      checked: false,
+      item: "Open pound of Beef",
+    },
+    {
+      id: 1,
+      checked: false,
+      item: "Item 2",
+    },
+    {
+      id: 1,
+      checked: false,
+      item: "Item 3",
+    },
+  ]);
 
-  const handelGreet = () => {
-    const greets = ["Hello", "Hola", "Bonjour", "こんにちは"];
-    setGreet(greets[Math.floor(Math.random() * greets.length)]);
-  };
-
-  const handelClick = () => {
-    console.log("You got it");
-  };
-  const handelClickTwo = (name) => {
-    console.log(`${name} was here`);
-  };
-  const handelClickThree = (e) => {
-    console.log(e.target.innerText);
-  };
   return (
     <main>
-      <p onDoubleClick={handelClick}>
-        {greet}, {name}!
-      </p>
-
-      <button onClick={handelGreet}>Change Greet</button>
-      <button onClick={handelNameChange}>Change Name</button>
-      <button onClick={() => handelClickTwo("nico")}>Click me</button>
-      <button onClick={(e) => handelClickThree(e)}>Click me</button>
+      <ul>
+        {items.map((item) => (
+          <li className="item" key={item.id}>
+            <input type="checkbox" checked={item.checked} />
+            <label>{item.item}</label>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 };
