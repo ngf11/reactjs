@@ -1,8 +1,10 @@
-function Footer() {
-  const today = new Date();
+function Footer({ length }) {
   return (
     <footer>
-      <p>Copyright &copy; {today.getFullYear()}</p>
+      <span></span>
+      <p>
+        {length} List {length > 0 ? "items" : "item"}
+      </p>
     </footer>
   );
 }
