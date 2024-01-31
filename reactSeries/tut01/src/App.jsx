@@ -1,4 +1,5 @@
 import Headers from "./Header";
+import AddItem from "./AddItem";
 import Content from "./Content";
 import Footer from "./Footer";
 import { useState } from "react";
@@ -37,6 +38,8 @@ export default function App() {
   return (
     <div className="App">
       <Headers title="Groceries List" />
+      <AddItem />
+
       <Content
         items={items}
         handelCheck={handelCheck}
