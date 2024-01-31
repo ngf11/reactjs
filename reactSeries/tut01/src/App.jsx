@@ -22,6 +22,7 @@ export default function App() {
       item: "Item 3",
     },
   ]);
+  const [newItem, setNewItems] = useState("");
   const handelCheck = (id) => {
     const listItems = items.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
@@ -35,10 +36,18 @@ export default function App() {
     setItems(listItems);
     localStorage.setItem("shopingList", JSON.stringify(listItems));
   };
+
+  const handelSubmit = (e) => {
+    console.log("Submitted ");
+  };
   return (
     <div className="App">
       <Headers title="Groceries List" />
-      <AddItem />
+      <AddItem
+        newItem={newItem}
+        setNewItems={setNewItems}
+        handelSubmit={handelSubmit}
+      />
 
       <Content
         items={items}

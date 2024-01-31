@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa";
-export const AddItem = () => {
+const AddItem = () => {
   return (
     <form className="addForm">
       <label htmlFor="addItem">Add Item</label>
@@ -16,3 +16,5 @@ export const AddItem = () => {
     </form>
   );
 };
+
+export default AddItem;
